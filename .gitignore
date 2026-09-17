@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+benchmark-runs/
+*.log
+*.pem
+*.key
+recipe/runtime/generated/
+comparison-rebuilt.json
+baseline-out/
+turbo-out/

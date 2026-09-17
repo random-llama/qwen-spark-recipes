@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "claim": "synthetic latency evidence only; this is not a throughput claim",
+  "trial_nonce": "138afdb0a61d776b499f75b3925afcae",
+  "n_per_arm": 70,
+  "per_class_visible_ttft_seconds": {
+    "c1-11k-fresh": {
+      "baseline": 5.559969630092382,
+      "turbo": 9.367686161072925,
+      "turbo_within_10_percent": false
+    },
+    "c1-11k-repeat": {
+      "baseline": 2.0269297359045595,
+      "turbo": 3.2933528600260615,
+      "turbo_within_10_percent": false
+    },
+    "c1-45k-fresh": {
+      "baseline": 22.125676327035762,
+      "turbo": 28.44611493498087,
+      "turbo_within_10_percent": false
+    },
+    "c1-45k-repeat": {
+      "baseline": 1.4161322069121525,
+      "turbo": 3.4373312030220404,
+      "turbo_within_10_percent": false
+    },
+    "c2-11k-fresh": {
+      "baseline": 9.01470140949823,
+      "turbo": 13.726992090523709,
+      "turbo_within_10_percent": false
+    },
+    "c2-11k-repeat": {
+      "baseline": 3.297170791949611,
+      "turbo": 5.768452144053299,
+      "turbo_within_10_percent": false
+    },
+    "c2-45k-fresh": {
+      "baseline": 33.818675286485814,
+      "turbo": 49.24557382951025,
+      "turbo_within_10_percent": false
+    },
+    "c2-45k-repeat": {
+      "baseline": 2.4082223259611055,
+      "turbo": 6.09082171699265,
+      "turbo_within_10_percent": false
+    },
+    "c4-11k-fresh": {
+      "baseline": 15.030845154542476,
+      "turbo": 22.230749672511593,
+      "turbo_within_10_percent": false
+    },
+    "c4-11k-repeat": {
+      "baseline": 5.900828943937086,
+      "turbo": 10.872647939017043,
+      "turbo_within_10_percent": false
+    },
+    "c4-45k-fresh": {
+      "baseline": 56.69894342153566,
+      "turbo": 92.96625480504008,
+      "turbo_within_10_percent": false
+    },
+    "c4-45k-repeat": {
+      "baseline": 4.276041550969239,
+      "turbo": 11.6405464305426,
+      "turbo_within_10_percent": false
+    }
+  },
+  "baseline_coding_elapsed_median_seconds": 1.0586592740146443,
+  "turbo_coding_elapsed_median_seconds": 0.7358708800747991,
+  "coding_elapsed_improvement": 0.3049030050204615,
+  "quality": {
+    "baseline": {
+      "valid": true,
+      "records": 70,
+      "counts": {
+        "context": 28,
+        "overlap": 2,
+        "thinking": 2,
+        "tool": 8,
+        "tool_followup": 8,
+        "vision": 1,
+        "code": 21
+      },
+      "reasons": []
+    },
+    "turbo": {
+      "valid": true,
+      "records": 70,
+      "counts": {
+        "context": 28,
+        "overlap": 2,
+        "thinking": 2,
+        "tool": 8,
+        "tool_followup": 8,
+        "vision": 1,
+        "code": 21
+      },
+      "reasons": []
+    }
+  },
+  "all_ttft_gates_pass": false,
+  "eligible_for_promotion": false
+}

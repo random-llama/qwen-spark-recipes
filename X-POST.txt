@@ -1,0 +1,11 @@
+2 DGX Sparks. 2 Qwens. All local. 🔥
+
+⚡ 4 concurrent requests per Spark
+🛠️ Tool calls + vision tested
+📊 Recipe + benchmark evidence
+
+Our NVFP4 profile had lower TTFT than Code Turbo in all 12 measured cells.*
+
+*One synthetic run per arm.
+
+https://github.com/random-llama/qwen-spark-recipes
