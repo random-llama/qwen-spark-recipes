@@ -1,5 +1,26 @@
 # Third-party notices
 
+## Attribution
+
+Primary recipe credit: **MiaAI Lab / [@MiaAI_lab](https://x.com/MiaAI_lab)**,
+whose [single-DGX-Spark recipe](https://github.com/MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark)
+is the foundation of this derivative. The underlying model is by
+**[Qwen / Alibaba](https://huggingface.co/Qwen)**. **vLLM contributors** provide
+the inference engine; **lancelind** is credited for the FP8 KV-cache approach
+described below. NVIDIA provides the DGX Spark hardware platform.
+
+Our contribution is deployment integration, local corrections, packaging,
+configuration qualification, and benchmark tooling/evidence. Running a second
+copy on another Spark is our deployment topology, not a new model architecture.
+
+The comparison-only Code Turbo checkpoint is by
+[sayyidfareed](https://huggingface.co/sayyidfareed/Qwen3.8-Flash-Next-Code-Turbo-Spark),
+with its runtime from
+[Saren-Arterius](https://github.com/Saren-Arterius/qwen3.8-Flash-DGX-AutoRound).
+That checkpoint/runtime is not redistributed in this repository.
+
+## Licenses and modifications
+
 Recipe scripts and copied patch sources are AGPL-3.0-or-later; see [LICENSE](LICENSE).
 The portable subpackage also carries `recipe/LICENSE`.
 

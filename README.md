@@ -1,8 +1,20 @@
-# Two Sparks. Two independent Qwens.
+# Qwen3.8-Flash-Next on one DGX Spark
 
-A working Qwen3.8-Flash-Next deployment on two NVIDIA DGX Sparks: one TP=1 engine per machine, four admitted sequences per engine, speculative decoding, prefix caching, and tested tools and image input.
+A single-Spark serving recipe derived from **[MiaAI Lab's original recipe](https://github.com/MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark)**. Our deployment runs two independent copies: one Qwen3.8-Flash-Next TP=1 engine per NVIDIA DGX Spark. You only need one Spark to use the recipe; a second lets your agent software route separate tasks to separate engines.
 
 This repository shares the serving recipe and a preliminary, reproducible comparison with Code Turbo. It is integration and validation work built on upstream projects—not a new model or a claim to the fastest Spark deployment.
+
+## Credits and our contribution
+
+- **[MiaAI Lab / @MiaAI_lab](https://x.com/MiaAI_lab)** — the foundational single-Spark recipe, the [NVFP4 checkpoint](https://huggingface.co/Mia-AiLab/Qwen3.8-Flash-Next-NVFP4), and the upstream PLE, quantization, and MTP/draft-vocabulary work used here. Primary recipe credit belongs to MiaAI Lab.
+- **[Qwen / Alibaba](https://huggingface.co/Qwen)** — the underlying Qwen3.8-Flash-Next model, including its multimodal capabilities.
+- **[vLLM contributors](https://github.com/vllm-project/vllm)** — the inference engine and parser/structured-output code on which our overlays are based.
+- **[lancelind](https://github.com/lancelind/qwen3.8-Flash-DGX)** — the FP8 KV-cache approach, reimplemented in MiaAI Lab's QSA patch. This credit applies specifically to that approach.
+- **NVIDIA** — the DGX Spark hardware platform.
+
+**Our additions:** deployment integration and packaging, local tool-call/parser corrections, configuration qualification, and the published synthetic benchmark harness and evidence. Our two-Spark workflow is an optional deployment of two copies of the single-Spark recipe. We did not originate the model, single-Spark fit, NVFP4 quantization, or upstream MTP optimization.
+
+The comparison candidate is credited separately to [sayyidfareed](https://huggingface.co/sayyidfareed/Qwen3.8-Flash-Next-Code-Turbo-Spark) and [Saren-Arterius](https://github.com/Saren-Arterius/qwen3.8-Flash-DGX-AutoRound). It was tested, not adopted as our retained serving profile. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for component licenses and modification notices.
 
 ## The setup
 
